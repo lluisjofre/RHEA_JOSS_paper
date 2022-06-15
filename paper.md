@@ -18,6 +18,7 @@ authors:
     orcid: 0000-0002-8810-7480
     affiliation: 1
   - name: Guillermo Oyarzun
+    orcid: 0000-0001-9524-3782
     affiliation: 2
 affiliations:
  - name: Dept. Fluid Mechanics, Technical University of Catalonia - BarcelonaTech, Barcelona 08019, Spain
