@@ -23,7 +23,7 @@ authors:
 affiliations:
  - name: Dept. Fluid Mechanics, Technical University of Catalonia - BarcelonaTech, Barcelona 08019, Spain
    index: 1
- - name: Grupo Mediapro, Barcelona 08018, Spain
+ - name: Dept. Computer Applications in Science & Engineering, Barcelona Supercomputing Center, Barcelona 08034, Spain
    index: 2
 date: 11 July 2022
 bibliography: paper.bib
