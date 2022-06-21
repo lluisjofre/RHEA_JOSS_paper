@@ -39,9 +39,20 @@ The study of complex multiscale flows greatly benefits from the combination of i
 
 The computational study and optimization of multiscale flow problems, like for example turbulence, requires the utilization of top-tier supercomputers. Particularly, the computational cost of studying turbulence, in terms of total number of grid points $N$, by means of direct numerical simulation (DNS) and/or large eddy simulation (LES) strategies scales with the Reynolds number as $N \sim Re^{9/4}$ and $N \sim Re$, respectively. Therefore, to scale flow simulations to large node counts, the mesh used to discretize the computational domain on which the equations of fluid motion are numerically solved needs to be partitioned (distributed) among the parallel tasks such that each of these only holds a local portion of the global mesh. The local portion of each task is composed by a set of grid points that it owns, i.e., the local grid points of the task, and a set of off-processor grid points (owned by remote processors) which are connected with its local grid points, i.e., the ghost grid points of the task. This overlapped mesh partition is used to exchange data among nearest neighbors by means of message passage interface (MPI) [@MPI] instructions. In addition, present (and future) supercomputers are equipped with accelerators, like for example graphics processing units (GPU), interconnected with the central processing units (CPU) and the main memory at the node level. In this regard, the flow solver RHEA uses OpenACC [@OpenACC] pragmas, based on a portable managed-memory approach, to efficiently speedup the main kernels dedicated to calculate inviscid & viscous fluxes and perform time integration. Finally, input/output/restart data file operations are carried out by means of high performance HDF5 [@HDF5] and YAML [@YAML] libraries. This computational framework has been designed with the objective to facilitate the portability of the flow solver from small- and mid-size workstations to the largest supercomputers worldwide, while maintaining excellent levels of computational performance. 
 
+There is only a handful of accelerated open-source compressible flow solvers available in the literature. Some selected examples include popular multi-purpose open-source packages (7,19) and OpenSBLI (20), which is a Python-based framework for the automated derivation of finite-difference solvers for hybrid (CPU-GPU) architectures.
 
+Another option is the use of the recent
+programming paradigm Legion (21) which allows to use
+the same solver on different HPC architectures (including GPUs), without requiring extensive code restructuring. A
+recent example of compressible flow solver using Legion
+is HTR(22), designed for hypersonic reacting flows. To our
+best knowledge, no open-source GPUs-based compressible
+solver is currently available, and the aim of this work is
+to fill this gap by adapting our CPUs-based compressible
+finite differences flow solver to run on multi-GPU clus-
+ters.
 
-There are a number of high quality open source parallel finite element packages available in the literature. Some examples are deal.II (Arndt et al., 2021), libMesh (Kirk et al., 2006), MFEM (Anderson et al., 2021), FEMPAR (Badia et al., 2017), FEniCS (Logg et al., 2012), or FreeFEM++ (Hecht, 2012), to name a few. All these packages have their own set of features, potentials, and limitations. Among these, FEniCS and FreeFEM++ are perhaps the closest ones in scope and spirit to the packages in the Gridap ecosystem. A hallmark of Gridap ecosystem packages compared to FreeFEM++ and FEniCS is that a very expressive and compact (yet efficient) syntax is transformed into low-level code using the Julia JIT compiler and thus they do not need a sophisticated compiler of variational forms nor a more intricate workflow (e.g., a Python front-end and a C/C++ back-end).
+STREAmS
 
 # Computational design
 
