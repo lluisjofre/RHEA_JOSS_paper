@@ -21,7 +21,7 @@ authors:
     orcid: 0000-0001-9524-3782
     affiliation: 2
 affiliations:
- - name: Dept. Fluid Mechanics, Technical University of Catalonia - BarcelonaTech, Barcelona 08019, Spain
+ - name: Dept. Fluid Mechanics, Universitat Politècnica de Catalunya · BarcelonaTech (UPC), Barcelona 08019, Spain
    index: 1
  - name: Dept. Computer Applications in Science & Engineering, Barcelona Supercomputing Center, Barcelona 08034, Spain
    index: 2
