@@ -50,8 +50,7 @@ The computational performance of RHEA is depicted in Figure 1 by carrying out (i
 ![Ratios of time-to-solution (Time) and energy-to-solution (Energy) of RHEA on Hybrid machine and BSC supercomputer using CPUs+GPUs versus CPUs (left). Strong scalability of RHEA on BSC supercomputer using CPUs and CPUs+GPUs (right).](figure_1.png)
 <!---
 <p align="middle">
-<img src = "time_energy_solution_hybrid_bsc_cpu_gpu.png" width = "49%" />
-<img src = "strong_speedup_bsc_cpu_gpu.png" width = "49%" />
+<img src = "figure_1.png" width = "90%" />
 <figcaption align = "center"> <b>Figure 1</b>: Ratios of time-to-solution (Time) and energy-to-solution (Energy) of RHEA on Hybrid machine and BSC supercomputer using CPUs+GPUs versus CPUs (left). Strong scalability of RHEA on BSC supercomputer using CPUs and CPUs+GPUs (right). </figcaption>
 </p>
 --->
@@ -65,8 +64,7 @@ The computational domain is $4 \pi \delta \times 2\delta \times 4/3\pi \delta$ i
 ![Comparison against reference results of the time-averaged streamwise velocity $u^+$ (left) and $rms$ velocity fluctuations $u_{rms}^{+}$, $v_{rms}^{+}$ and $w_{rms}^{+}$ (right) along the wall-normal direction $y^+$ in wall units.](figure_2.png)
 <!---
 <p align="middle">
-<img src = "u_plus_vs_y_plus.png" width = "49%" />
-<img src = "uvw_rms_plus_vs_y_plus.png" width = "50%" />
+<img src = "figure_2.png" width = "90%" />
 <figcaption align = "center"> <b>Figure 2</b>: Comparison against reference results of the time-averaged streamwise velocity $u^+$ (left) and $rms$ velocity fluctuations $u_{rms}^{+}$, $v_{rms}^{+}$ and $w_{rms}^{+}$ (right) along the wall-normal direction $y^+$ in wall units. </figcaption>
 </p>
 --->
@@ -76,7 +74,7 @@ The time-averaged mean streamwise velocity $u^+$ and root-mean-squared ($rms$) v
 ![Snapshot of the instantaneous streamwise velocity in wall units $u^+$ on a $x^+$-$y^+$ slice from RHEA.](figure_3.png)
 <!---
 <p align="middle">
-<img src = "3d_channel_u_velocity_vs_x_y_direction.png" width = "90%" />
+<img src = "figure_3.png" width = "90%" />
 <figcaption align = "center"> <b>Figure 3</b>: Snapshot of the instantaneous streamwise velocity in wall units $u^+$ on a $x^+$-$y^+$ slice from RHEA. </figcaption>
 </p>
 --->
