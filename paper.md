@@ -25,7 +25,7 @@ affiliations:
    index: 1
  - name: Department of Computer Applications in Science & Engineering, Barcelona Supercomputing Center, Barcelona 08034, Spain
    index: 2
-date: "11 July 2022"
+date: 11 July 2022
 bibliography: paper.bib
 ---
 
