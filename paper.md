@@ -80,6 +80,7 @@ The computational domain is $4 \pi \delta \times 2\delta \times 4/3\pi \delta$ i
 The time-averaged mean streamwise velocity $u^+$ and root-mean-squared ($rms$) velocity fluctuations $u_{rms}^{+}$, $v_{rms}^{+}$, $w_{rms}^{+}$ along the wall-normal direction $y^+$ in wall units provided by RHEA and compared to reference results [@Moser1999-A] are depicted in Figure 2. As shown in the figure, the results from RHEA accurately reproduce the first- and second-order turbulent flow statistics by (i) properly capturing the inner (viscous sublayer, buffer layer and and log-law region) and outer layers, and (ii) the turbulent flow fluctuations peaking around $y^+\approx 15$ for the streamwise velocity. Additionally, a snapshot of the instantaneous streamwise velocity in wall units $u^+$ on a $x^+$-$y^+$ slice is displayed in Figure 3 to provide qualitative information of the wall-bounded turbulence computed by RHEA.
 
 ![Image](figure_3.png)
+
 **Figure 3.** Snapshot of the instantaneous streamwise velocity in wall units $u^+$ on a $x^+$-$y^+$ slice from RHEA.
 <!---
 ![Snapshot of the instantaneous streamwise velocity in wall units $u^+$ on a $x^+$-$y^+$ slice from RHEA.](figure_3.png)
