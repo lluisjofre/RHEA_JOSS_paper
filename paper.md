@@ -61,7 +61,7 @@ The computational domain is $4 \pi \delta \times 2\delta \times 4/3\pi \delta$ i
 
 <p align="middle">
 <img src = "u_plus_vs_y_plus.png" width = "49%" />
-<img src = "uvw_rms_plus_vs_y_plus.png" width = "49%" />
+<img src = "uvw_rms_plus_vs_y_plus.png" width = "50%" />
 <figcaption align = "center"> <b>Figure 2</b>: Comparison against reference results of the time-averaged streamwise velocity $u^+$ (left) and $rms$ velocity fluctuations $u_{rms}^{+}$, $v_{rms}^{+}$ and $w_{rms}^{+}$ (right) along the wall-normal direction $y^+$ in wall units. </figcaption>
 </p>
 
