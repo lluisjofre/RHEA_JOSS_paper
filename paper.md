@@ -47,7 +47,11 @@ RHEA solves the compressible equations of fluid motion utilizing non-uniform Car
 
 The computational performance of RHEA is depicted in Figure 1 by carrying out (i) time- \& energy-to-solution, and (ii) strong scalability tests based on $100$ time iterations of the 3-D turbulent channel flow configuration described in the next section. In this regard, to assess the portability of RHEA to different computing systems, the performance tests have been performed on (i) a local hybrid machine (results are referred to as Hybrid), and (ii) the Barcelona Supercomputer Center [@BSC] (results are indicated as BSC). The Hybrid machine is composed of a node with 1 AMD Ryzen 9 3900XT 12-core CPU and 2 NVIDIA Quadro RTX 4000 GPUs, while the BSC supercomputer contains a CPU-GPU cluster with 3 racks formed of 54 IBM POWER9 nodes, each containing 2 Witherspoons CPUs (20 cores of 3.1 GHz each), 4 Volta NVIDIA GPUs (16 GB each), and 6.4 TB of NVMe (Non-Volatile Memory). Three main observations can be inferred from the results. First, when using CPUs+GPUs with respect to only CPUs, the solver is accelerated approximately $2.5\times$ and $5\times$ on the Hybrid and BSC computers. Second, running on CPUs+GPUs consume more power (Joules per second, i.e., Watts) than on CPUs, however, the energy-to-solution (Joules) is reduced by factors of roughly $1.3$ and $2.5$ on the Hybrid and BSC systems, respectively. Third, on BSC for a fixed-problem size, the solver presents nearly ideal speedup in terms of strong scalability running on both CPUs and CPUs+GPUs up to 32 nodes (640 cores and 128 GPUs) until communication overheads become important in relative value.
 
+![Image](figure_1.png)
+**Figure 1.** Ratios of time-to-solution (Time) and energy-to-solution (Energy) of RHEA on Hybrid machine and BSC supercomputer using CPUs+GPUs versus CPUs (left). Strong scalability of RHEA on BSC supercomputer using CPUs and CPUs+GPUs (right).
+<!---
 ![Ratios of time-to-solution (Time) and energy-to-solution (Energy) of RHEA on Hybrid machine and BSC supercomputer using CPUs+GPUs versus CPUs (left). Strong scalability of RHEA on BSC supercomputer using CPUs and CPUs+GPUs (right).](figure_1.png)
+--->
 <!---
 <p align="middle">
 <img src = "figure_1.png" width = "90%" />
@@ -61,7 +65,11 @@ The ability of RHEA to easily configure computational flow problems and run them
 
 The computational domain is $4 \pi \delta \times 2\delta \times 4/3\pi \delta$ in the streamwise ($x$), wall-normal ($y$), and spanwise ($z$) directions, respectively. The streamwise and spanwise boundaries are set periodic, and no-slip conditions are imposed on the horizontal boundaries ($x$-$z$ planes). The grid is uniform in the streamwise and spanwise directions with resolutions in wall units equal to $\Delta x^{+} = 9$ and $\Delta z^{+} = 6$, and stretched toward the walls in the vertical direction with the first grid point at $y^{+} = y u_{\tau}/\nu =0.1$ and with sizes in the range $0.1 \lesssim \Delta y^{+} \lesssim 4$. This grid arrangement corresponds to a DNS of size $256 \times 128 \times 128$ grid points. The simulation strategy starts from a linear velocity profile with random fluctuations [@Nelson2017-A], which is advanced in time utilizing the KGP convection scheme [@Coppola2019-A] with $\textrm{CFL}=0.9$ to reach turbulent steady-state conditions after approximately $20$ flow-through-time (FTT) units; based on the bulk velocity $u_{b}$ and the length of the channel $L_x = 4\pi\delta$, a FTT is defined as $t_{b} = L_x/u_{b} \sim \delta/u_{\tau}$. Flow statistics are collected for roughly $30$ FTTs once steady-state conditions are achieved, and compared against reference results [@Moser1999-A].
 
+![Image](figure_2.png)
+**Figure 2.** Comparison against reference results of the time-averaged streamwise velocity $u^+$ (left) and $rms$ velocity fluctuations $u_{rms}^{+}$, $v_{rms}^{+}$ and $w_{rms}^{+}$ (right) along the wall-normal direction $y^+$ in wall units.
+<!---
 ![Comparison against reference results of the time-averaged streamwise velocity $u^+$ (left) and $rms$ velocity fluctuations $u_{rms}^{+}$, $v_{rms}^{+}$ and $w_{rms}^{+}$ (right) along the wall-normal direction $y^+$ in wall units.](figure_2.png)
+--->
 <!---
 <p align="middle">
 <img src = "figure_2.png" width = "90%" />
@@ -71,7 +79,11 @@ The computational domain is $4 \pi \delta \times 2\delta \times 4/3\pi \delta$ i
 
 The time-averaged mean streamwise velocity $u^+$ and root-mean-squared ($rms$) velocity fluctuations $u_{rms}^{+}$, $v_{rms}^{+}$, $w_{rms}^{+}$ along the wall-normal direction $y^+$ in wall units provided by RHEA and compared to reference results [@Moser1999-A] are depicted in Figure 2. As shown in the figure, the results from RHEA accurately reproduce the first- and second-order turbulent flow statistics by (i) properly capturing the inner (viscous sublayer, buffer layer and and log-law region) and outer layers, and (ii) the turbulent flow fluctuations peaking around $y^+\approx 15$ for the streamwise velocity. Additionally, a snapshot of the instantaneous streamwise velocity in wall units $u^+$ on a $x^+$-$y^+$ slice is displayed in Figure 3 to provide qualitative information of the wall-bounded turbulence computed by RHEA.
 
+![Image](figure_3.png)
+**Figure 3.** Snapshot of the instantaneous streamwise velocity in wall units $u^+$ on a $x^+$-$y^+$ slice from RHEA.
+<!---
 ![Snapshot of the instantaneous streamwise velocity in wall units $u^+$ on a $x^+$-$y^+$ slice from RHEA.](figure_3.png)
+--->
 <!---
 <p align="middle">
 <img src = "figure_3.png" width = "90%" />
